@@ -1,0 +1,8 @@
+.hero {
+    text-align: center;
+}
+
+.hero p {
+    max-width: 55ch;
+    margin: 0 auto;
+}
