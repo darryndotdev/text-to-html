@@ -1,9 +1,12 @@
 import Hero from './components/Hero/Hero';
+import Centralised from './components/UI/Centralised/Centralised';
 
 function App() {
     return (
         <>
-            <Hero />
+            <Centralised>
+                <Hero />
+            </Centralised>
         </>
     );
 }
