@@ -1,18 +1,12 @@
-import { useState } from 'react';
-
-const Form = ({ onInput }) => {
-    const [textToConvert, setTextToConvert] = useState('');
-
+const Form = ({ textToConvert, onSetTextToConvert }) => {
     function handleSubmit(e) {
         e.preventDefault();
 
         if (!textToConvert) return;
-
-        onInput(textToConvert);
     }
 
     function handleReset() {
-        setTextToConvert('');
+        onSetTextToConvert('');
     }
 
     return (
@@ -21,7 +15,7 @@ const Form = ({ onInput }) => {
             <form onSubmit={handleSubmit}>
                 <textarea
                     value={textToConvert}
-                    onChange={(e) => setTextToConvert(e.target.value)}
+                    onChange={(e) => onSetTextToConvert(e.target.value)}
                     rows='4'
                     cols='40'
                 ></textarea>

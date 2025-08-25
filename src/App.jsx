@@ -5,20 +5,16 @@ import Form from './components/Form/Form';
 import Centralised from './components/UI/Centralised/Centralised';
 
 function App() {
-    const [input, setInput] = useState('');
-
-    function handleSetInput() {
-        setInput(input);
-
-        console.log('input from parent: app');
-        console.log(input);
-    }
+    const [textToConvert, setTextToConvert] = useState('');
 
     return (
         <>
             <Centralised>
                 <Hero />
-                <Form onInput={handleSetInput} />
+                <Form
+                    textToConvert={textToConvert}
+                    onSetTextToConvert={setTextToConvert}
+                />
             </Centralised>
         </>
     );
