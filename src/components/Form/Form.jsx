@@ -3,11 +3,23 @@ import { useState } from 'react';
 const Form = ({ onSetTextToConvert }) => {
     const [text, setText] = useState('');
 
+    function processText(input) {
+        const parts = input
+            .split('.')
+            .map((x) => x.replace(/\s+/g, ' ').trim())
+            .filter((x) => x.length > 0);
+
+        const wrapped = parts.map((s) => `<p>${s}</p>`).join('\n');
+
+        return wrapped;
+    }
+
     function handleSubmit(e) {
         e.preventDefault();
 
         if (!text) return;
-        onSetTextToConvert(text);
+
+        onSetTextToConvert(processText(text));
     }
 
     function handleReset() {
