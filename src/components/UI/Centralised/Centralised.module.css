@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 64rem;
+    gap: 1rem;
+    max-width: 48rem;
     margin: 0 auto;
     padding: 0 1rem;
     min-height: 100vh;

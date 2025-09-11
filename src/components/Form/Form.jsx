@@ -25,9 +25,11 @@ const Form = ({ onSetTextToConvert }) => {
                     rows='4'
                     cols='40'
                 ></textarea>
-                <div>
-                    <button type='submit'>Convert text</button>
-                    <button onClick={handleReset}>Reset</button>
+                <div className='grid'>
+                    <button>Convert text</button>
+                    <button onClick={handleReset} className='outline'>
+                        Reset
+                    </button>
                 </div>
             </form>
         </>
