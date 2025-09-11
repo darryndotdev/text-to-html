@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 const Form = ({ onSetTextToConvert }) => {
     const [text, setText] = useState('');
+    const [option, setOption] = useState('paragraph');
 
     function processText(input) {
         const parts = input
@@ -9,9 +10,22 @@ const Form = ({ onSetTextToConvert }) => {
             .map((x) => x.replace(/\s+/g, ' ').trim())
             .filter((x) => x.length > 0);
 
-        const wrapped = parts.map((s) => `<p>${s}</p>`).join('\n');
-
-        return wrapped;
+        if (option === 'paragraph') {
+            const wrapped = parts.map((x) => `<p>${x}</p>`).join('\n');
+            return wrapped;
+        }
+        if (option === 'unordered') {
+            const wrapped = parts
+                .map((x) => `        <li>${x}</li>`)
+                .join('\n');
+            return `<ul>\n${wrapped}\n</ul>`;
+        }
+        if (option === 'ordered') {
+            const wrapped = parts
+                .map((x) => `        <li>${x}</li>`)
+                .join('\n');
+            return `<ol>\n${wrapped}\n</ol>`;
+        }
     }
 
     function handleSubmit(e) {
@@ -29,6 +43,16 @@ const Form = ({ onSetTextToConvert }) => {
 
     return (
         <>
+            <h2>Choose mark up</h2>
+            <select
+                value={option}
+                onChange={(e) => setOption(e.target.value)}
+                style={{ cursor: 'pointer' }}
+            >
+                <option value='paragraph'>Paragraph</option>
+                <option value='unordered'>Unordered list</option>
+                <option value='ordered'>Ordered list</option>
+            </select>
             <h2>Paste text</h2>
             <form onSubmit={handleSubmit}>
                 <textarea

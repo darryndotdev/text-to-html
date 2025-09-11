@@ -11,10 +11,7 @@ function App() {
         <>
             <Centralised>
                 <Hero />
-                <Form
-                    textToConvert={textToConvert}
-                    onSetTextToConvert={setTextToConvert}
-                />
+                <Form onSetTextToConvert={setTextToConvert} />
                 <Output textToConvert={textToConvert} />
             </Centralised>
         </>
