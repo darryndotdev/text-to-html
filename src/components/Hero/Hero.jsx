@@ -5,8 +5,8 @@ const Hero = () => {
         <header className={styles.hero}>
             <h1>Convert text to HTML</h1>
             <p>
-                A simple yet powerful tool designed to save you time by
-                effortlessly converting plain text into boilerplate HTML.
+                A powerful tool designed to save you time and reduce errors by
+                transforming plain text into clean and structured HTML.
             </p>
         </header>
     );

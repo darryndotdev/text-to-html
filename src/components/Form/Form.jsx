@@ -43,7 +43,7 @@ const Form = ({ onSetTextToConvert }) => {
 
     return (
         <>
-            <h2>Choose mark up</h2>
+            <h2>Select HTML format</h2>
             <select
                 value={option}
                 onChange={(e) => setOption(e.target.value)}
@@ -53,7 +53,7 @@ const Form = ({ onSetTextToConvert }) => {
                 <option value='unordered'>Unordered list</option>
                 <option value='ordered'>Ordered list</option>
             </select>
-            <h2>Paste text</h2>
+            <h2>Paste your text</h2>
             <form onSubmit={handleSubmit}>
                 <textarea
                     value={text}

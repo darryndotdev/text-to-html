@@ -17,7 +17,7 @@ const Output = ({ textToConvert }) => {
 
     return (
         <>
-            <h2>Copy converted text</h2>
+            <h2>Copy transformed text</h2>
             <form onSubmit={handleSubmit}>
                 <textarea
                     defaultValue={textToConvert}
