@@ -6,7 +6,7 @@ const Form = ({ onSetTextToConvert }) => {
 
     function processText(input) {
         const parts = input
-            .split('.')
+            .split('\n')
             .map((x) => x.replace(/\s+/g, ' ').trim())
             .filter((x) => x.length > 0);
 
