@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const Form = ({ onSetTextToConvert }) => {
     const [text, setText] = useState('');
-    const [option, setOption] = useState('paragraph');
+    const [option, setOption] = useState('');
 
     function processText(input) {
         const parts = input
@@ -14,16 +14,18 @@ const Form = ({ onSetTextToConvert }) => {
             const wrapped = parts.map((x) => `<p>${x}</p>`).join('\n');
             return wrapped;
         }
-        if (option === 'unordered') {
+        if (option === 'bold') {
             const wrapped = parts
-                .map((x) => `        <li>${x}</li>`)
+                .map((x) => `<strong>${x}</strong>`)
                 .join('\n');
+            return wrapped;
+        }
+        if (option === 'unordered') {
+            const wrapped = parts.map((x) => `      <li>${x}</li>`).join('\n');
             return `<ul>\n${wrapped}\n</ul>`;
         }
         if (option === 'ordered') {
-            const wrapped = parts
-                .map((x) => `        <li>${x}</li>`)
-                .join('\n');
+            const wrapped = parts.map((x) => `      <li>${x}</li>`).join('\n');
             return `<ol>\n${wrapped}\n</ol>`;
         }
     }
@@ -49,9 +51,13 @@ const Form = ({ onSetTextToConvert }) => {
                 onChange={(e) => setOption(e.target.value)}
                 style={{ cursor: 'pointer' }}
             >
+                <option value='' disabled>
+                    -- Choose an option --
+                </option>
                 <option value='paragraph'>Paragraph</option>
-                <option value='unordered'>Unordered list</option>
-                <option value='ordered'>Ordered list</option>
+                <option value='bold'>Bold</option>
+                <option value='unordered'>Bullet list</option>
+                <option value='ordered'>Numbered list</option>
             </select>
             <h2>Paste your text</h2>
             <form onSubmit={handleSubmit}>
