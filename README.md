@@ -1,12 +1,37 @@
-# React + Vite
+# 🔥Text to HTML
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple yet powerful tool designed to transform plain text into clean and structured HTML.
 
-Currently, two official plugins are available:
+## 🧰 Why I Built This Tool
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+As part of my daily work migrating websites and designing pages in a CMS, I often found myself spending too much time manually creating boilerplate HTML. It was repetitive and slowed down my workflow. This tool was built to streamline that process, now I can simply copy and paste content and instantly generate clean, structured HTML, saving time and reducing errors.
 
-## Expanding the ESLint configuration
+It also served as a great opportunity to practice developing in React while solving a real-world problem I encounter regularly.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+-  Auto-wrap paragraphs
+-  Generate unordered lists
+-  Generate ordered lists
+
+## 🚀 Usage
+
+1. Select the desired formatting option (paragraphs, ordered/unordered lists)
+2. Paste your plain text into the input field
+3. Copy the generated HTML output
+4. Reset and start again
+
+[You can try it live here](https://darryndotdev.github.io/text-to-html/)
+
+## 🛠 Tech stack
+
+This project is built using the following technologies:
+
+- **Vite** – Fast and modern frontend tooling for rapid development  
+- **React** – Component-based UI library for building interactive interfaces  
+- **Pico CSS** – Minimal CSS framework for clean and responsive design  
+- **Sass** – CSS preprocessor for more maintainable and scalable styling
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have ideas for improvements, bug fixes, or new features, feel free to [get in touch](https://darryn.dev/contact).
