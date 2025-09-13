@@ -10,7 +10,8 @@ It also served as a great opportunity to practice developing in React while solv
 
 ## ✨ Features
 
--  Auto-wrap paragraphs
+-  Wrap paragraphs
+-  Wrap bold text
 -  Generate unordered lists
 -  Generate ordered lists
 
