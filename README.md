@@ -10,10 +10,11 @@ It also served as a great opportunity to practice developing in React while solv
 
 ## ✨ Features
 
--  Wrap paragraphs
--  Wrap bold text
--  Generate unordered lists
--  Generate ordered lists
+-   Wrap paragraphs
+-   Wrap bold text
+-   Generate unordered lists
+-   Generate ordered lists
+-   Dark/Light mode toggle
 
 ## 🚀 Usage
 
@@ -28,10 +29,10 @@ It also served as a great opportunity to practice developing in React while solv
 
 This project is built using the following technologies:
 
-- **Vite** – Fast and modern frontend tooling for rapid development  
-- **React** – Component-based UI library for building interactive interfaces  
-- **Pico CSS** – Minimal CSS framework for clean and responsive design  
-- **Sass** – CSS preprocessor for more maintainable and scalable styling
+-   **Vite** – Fast and modern frontend tooling for rapid development
+-   **React** – Component-based UI library for building interactive interfaces
+-   **Pico CSS** – Minimal CSS framework for clean and responsive design
+-   **Sass** – CSS preprocessor for more maintainable and scalable styling
 
 ## 🤝 Contributing
 
